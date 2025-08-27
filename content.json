@@ -1,0 +1,56 @@
+{
+  "en": {
+    "welcome": "Welcome! This bot provides information about Rabies. This is not a substitute for professional medical advice.",
+    "select_language": "Please select your language.",
+    "faq_prompt": "How can I help you? Please choose a question below.",
+    "error_handler": "Please choose one of the options below to continue.",
+    "end_chat_message": "Thank you for using the bot. Stay safe! You can type /start to begin a new chat.",
+    "selection_confirmation": "You selected:",
+    "buttons": {
+      "lang_en": "English",
+      "lang_hi": "हिन्दी",
+      "back_to_menu": "⬅️ Back to Question List",
+      "ask_another": "Ask another question",
+      "end_chat": "End Chat"
+    },
+    "faq": {
+      "what_is_rabies_q": "What is Rabies? (Symptoms & Risk)",
+      "what_is_rabies_a": "Rabies is a *deadly viral disease* usually spread through the bite or saliva of an infected animal. It attacks the brain and nervous system. If left untreated, it is *100% fatal*.\n\n*Key Symptoms (in humans):*\n• Fever, headache, fatigue\n• Tingling or itching at the wound site\n• Fear of water (Hydrophobia)\n• Confusion, aggressive behaviour, seizures\n• Coma and ultimately, death\n\n*Which animals can spread it?*\n• Most commonly *dogs* (over 95% of cases)\n• But also from cats, monkeys, cattle, mongooses, foxes, bats, etc.",
+      "first_aid_q": "What to do IMMEDIATELY after a bite? (First Aid)",
+      "first_aid_a": "WHO Guidelines\n\nRemember: *The sooner the treatment, the better the protection.*\n\n1.  *Wash the Wound:* Immediately and thoroughly wash the wound with *soap and running water* for at least *15 minutes*. This is the *most critical step*.\n2.  *Apply Disinfectant:* Clean the wound with alcohol or povidone-iodine (e.g., Betadine).\n3.  *Contact a Doctor:* Go to the nearest hospital/doctor immediately. The doctor will:\n    - Assess the wound and administer the *Anti-Rabies Vaccine*.\n    - In severe cases, also administer *Rabies Immunoglobulin (RIG)*.\n4.  *Tetanus Shot:* Get a tetanus booster shot if required.\n\n*WARNING:* Do *NOT* get the wound stitched. Do *NOT* apply substances like lime, chili powder, turmeric, or practice any form of folk medicine.",
+      "prevention_q": "How to prevent Rabies? (Vaccination)",
+      "prevention_a": "1.  *Vaccinate Pets:* Get your dogs and cats *vaccinated annually* against rabies. This is the best prevention.\n2.  *Avoid Stray Animals:* Do not provoke or approach unknown or stray animals, especially if they have young.\n3.  *Educate Children:* Teach children to be cautious around animals and to immediately report any bite or scratch.\n4.  *Beware of Bats:* If a bat enters your home, try to remove it without touching it.\n\n*Remember:* Rabies is *100% preventable* if the correct treatment is started promptly after exposure.",
+      "myths_facts_q": "Common Myths vs Facts about Rabies",
+      "myths_facts_a": "*Common Myths vs Facts*\n\n❌ *Myth:* Rabies only comes from animals that look \"rabid\" or mad.\n✅ *Fact:* Any animal, even one that looks normal (including pets), can be a carrier of the rabies virus.\n\n❌ *Myth:* You need 10-12 painful injections in the stomach.\n✅ *Fact:* Modern vaccines are *safe* and given in the *arm muscle* (like a flu shot). Usually, only *4-5 injections* are required.\n\n❌ *Myth:* If the dog is alive after 10 days, you don't have rabies.\n✅ *Fact:* This is a *useful observation rule*, but you should *NOT wait!* Start treatment immediately. If the dog is still healthy after 10 days, the doctor may stop the remaining vaccine doses.\n\n❌ *Myth:* Home remedies like Red Chilli Powder, lime, garlic, or magic spells can cure rabies.\n✅ *Fact:* The *only treatment* for rabies exposure is the *vaccine*. Home remedies are *deadly*.",
+      "emergency_assistance_q": "Immediate Emergency Assistance",
+      "emergency_assistance_a": "If you or someone else has been bitten by an animal, *act immediately:*\n\n1. Wash the wound with soap and running water as described above.\n2. *Go to the nearest health center or hospital immediately.*\n\n*Remember:* Delay can be fatal. Do not postpone until tomorrow."
+    }
+  },
+  "hi": {
+    "welcome": "नमस्ते! यह बॉट रेबीज़ के बारे में जानकारी प्रदान करता है। यह पेशेवर चिकित्सा सलाह का विकल्प नहीं है।",
+    "select_language": "कृपया अपनी भाषा चुनें।",
+    "faq_prompt": "मैं आपकी कैसे मदद कर सकता हूँ? कृपया नीचे एक प्रश्न चुनें।",
+    "error_handler": "जारी रखने के लिए कृपया नीचे दिए गए विकल्पों में से एक चुनें।",
+    "end_chat_message": "बॉट का उपयोग करने के लिए धन्यवाद। सुरक्षित रहें! आप नई चैट शुरू करने के लिए /start टाइप कर सकते हैं।",
+    "selection_confirmation": "आपने चुना:",
+    "buttons": {
+      "lang_en": "English",
+      "lang_hi": "हिन्दी",
+      "back_to_menu": "⬅️ प्रश्नों की सूची पर वापस जाएं",
+      "ask_another": "दूसरा प्रश्न पूछें",
+      "end_chat": "चैट समाप्त करें"
+    },
+    "faq": {
+      "what_is_rabies_q": "रेबीज क्या है? (लक्षण और खतरा)",
+      "what_is_rabies_a": "रेबीज  एक *घातक वायरल बीमारी* है जो आमतौर पर संक्रमित जानवर के काटने या लार से फैलती है। यह मस्तिष्क और तंत्रिका तंत्र पर हमला करती है। अगर इलाज न किया जाए, यह *100% मौत का कारण* बन सकती है।\n\n*मुख्य लक्षण (इंसानों में):*\n• बुखार, सिरदर्द, थकान\n• घाव के आसपास झनझनाहट या खुजली\n• पानी से डर लगना (हाइड्रोफोबिया)\n• उलझन, आक्रामक व्यवहार, दौरे पड़ना\n• कोमा और अंततः मृत्यु\n\n*किन जानवरों से फैल सकता है?*\n• किसी भी स्तनधारी जीव परन्तु, ज्यादातर *कुत्तों* से (95% से अधिक मामले)|\n• बिल्लियाँ, बंदर, गाय-भैंस, नेवले, लोमड़ी, चमगादड़ आदि से भी।",
+      "first_aid_q": "काटे जाने पर तुरंत क्या करें? (प्राथमिक उपचार)",
+      "first_aid_a": "WHO की सलाह\n\nयाद रखें: *जितनी जल्दी इलाज, उतनी बेहतर सुरक्षा।*\n\n1. *घाव को धोएं:* तुरंत घाव को *साबुन और बहते पानी* से कम से कम *15 मिनट* तक लगातार अच्छी तरह धोएं। यह सबसे *जरूरी कदम* है।\n2. *कीटाणुनाशक लगाएं:* घाव को अल्कोहल या पोविडोन-आयोडीन(Betadine) से साफ करें।\n3. *डॉक्टर से संपर्क करें:* तुरंत नजदीकी अस्पताल/डॉक्टर के पास जाएं। डॉक्टर:\n   - घाव की स्थिति देखकर *रेबीज का टीका (Anti-Rabies Vaccine)* लगाएंगे।\n   - गंभीर मामलों में *रेबीज इम्युनोग्लोबुलिन (RIG)* भी लगा सकते हैं।\n4. *टेटनस का इंजेक्शन:* जरूरत पड़ने पर टेटनस का बूस्टर भी लगवाएं।\n\n*चेतावनी:* घाव को पट्टी या *टांका नहीं* लगवाना चाहिए। घाव पर नींबू, मिर्च, हल्दी, या झाड़-फूंक *बिल्कुल न लगाएं*।",
+      "prevention_q": "रेबीज से बचाव कैसे करें? (टीकाकरण)",
+      "prevention_a": "1. *पालतू जानवरों का टीकाकरण:* अपने कुत्तों और बिल्लियों को *सालाना रेबीज का टीका* जरूर लगवाएं। यह सबसे अच्छा बचाव है।\n2. *आवारा जानवरों से दूरी:* अनजान या आवारा जानवरों को छेड़ें नहीं, खासकर उनके बच्चों के पास।\n3. *बच्चों को सिखाएं:* बच्चों को जानवरों के पास सावधानी बरतने और किसी भी काटने की सूचना देने के लिए कहें।\n4. *चमगादड़ों से सावधान:* अगर चमगादड़ घर में आए, तो उसे बिना छुए हटाने की कोशिश करें।\n\n*याद रखें:* रेबीज की बीमारी *पूरी तरह से रोकी जा सकती है* अगर सही समय पर सही इलाज शुरू कर दिया जाए।",
+      "myths_facts_q": "रेबीज के बारे में आम मिथक व सच्चाई",
+      "myths_facts_a": "❌ *मिथक:* रेबीज सिर्फ \"पागल\" दिखने वाले जानवरों से फैलता है.\n✅ *सच:* सामान्य दिखने वाला कोई भी जानवर (यहां तक कि पालतू) रेबीज का वाहक हो सकता है.\n\n❌ *मिथक:* काटे जाने के बाद 10-12 इंजेक्शन पेट में लगते हैं, बहुत दर्द होता है.\n✅ *सच:* आधुनिक टीके *सुरक्षित* हैं और *हाथ/पैर की मांसपेशियों* में लगाए जाते हैं। \n\n❌ *मिथक:* अगर कुत्ता 10 दिन तक जिंदा रहे तो रेबीज नहीं होता.\n✅ *सच:* यह एक *उपयोगी नियम* है, लेकिन इंतजार *नहीं* करना चाहिए! तुरंत पहला इलाज शुरू करें। अगर कुत्ता 10 दिन बाद स्वस्थ है, तो डॉक्टर बाकी के इंजेक्शन रोक सकते हैं.\n\n❌ *मिथक:* लाल मिर्च, नींबू, लहसुन, या झाड़-फूंक से रेबीज ठीक हो जाता है.\n✅ *सच:* रेबीज का *इलाज केवल टीका* है। घरेलू नुस्खे *जानलेवा* हो सकते हैं.",
+      "emergency_assistance_q": "तुरंत आपातकालीन स्थिति में",
+      "emergency_assistance_a": "*तुरंत आपातकालीन स्थिति में*\n\nअगर आपको या किसी और को किसी जानवर ने काटा है, तो *तुरंत यह करें:*\n1. ऊपर बताए अनुसार घाव को साबुन और पानी से धोएं.\n2. *तुरंत नजदीकी स्वास्थ्य केंद्र या अस्पताल जाएं.*\n*याद रखें:* देरी जानलेवा हो सकती है। कल पर मत टालें."
+    }
+  }
+}

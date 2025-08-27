@@ -2,17 +2,18 @@
 #
 # This version of the bot is simplified to be FAQ-only.
 # After language selection, it goes directly to the question list.
-# This version has been updated to correctly parse Markdown for bold/italic text.
+# This version has been updated to correctly parse Markdown and use environment variables for deployment.
 #
 # To run this bot:
 # 1. Install the library: pip install python-telegram-bot
 # 2. Create a file named 'content.json' in the same directory and paste the JSON content into it.
 # 3. Get a bot token from Telegram's @BotFather.
-# 4. Replace 'YOUR_TELEGRAM_BOT_TOKEN' below with your actual token.
+# 4. Set the TELEGRAM_TOKEN environment variable.
 # 5. Run the script: python rabies_bot.py
 
 import json
 import logging
+import os  # <-- IMPORT ADDED FOR DEPLOYMENT
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update, CallbackQuery
 from telegram.ext import (
     Application,
@@ -23,7 +24,6 @@ from telegram.ext import (
     filters,
     ContextTypes,
 )
-# --- FIX: Import ParseMode ---
 from telegram.constants import ParseMode
 
 # --- Setup Logging ---
@@ -84,10 +84,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     reply_markup = InlineKeyboardMarkup(keyboard)
     
     if update.message:
-        # --- FIX: Added parse_mode ---
         await update.message.reply_text(welcome_text, reply_markup=reply_markup, parse_mode=ParseMode.MARKDOWN)
     elif update.callback_query:
-        # --- FIX: Added parse_mode ---
         await update.callback_query.message.reply_text(welcome_text, reply_markup=reply_markup, parse_mode=ParseMode.MARKDOWN)
 
     return SELECTING_LANG
@@ -103,7 +101,6 @@ async def select_language(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     
     await query.edit_message_reply_markup(reply_markup=None)
     if button_text:
-        # --- FIX: Added parse_mode ---
         await query.edit_message_text(text=f"*{get_text('selection_confirmation', lang)}* {button_text}", parse_mode=ParseMode.MARKDOWN)
 
     # Directly call the function to show the FAQ list
@@ -126,8 +123,6 @@ async def faq_path_start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     reply_markup = InlineKeyboardMarkup(keyboard)
     message_text = get_text('faq_prompt', lang)
     
-    # Send a new message with the FAQ list
-    # --- FIX: Added parse_mode ---
     await query.message.reply_text(text=message_text, reply_markup=reply_markup, parse_mode=ParseMode.MARKDOWN)
     return FAQ_PATH
 
@@ -140,7 +135,6 @@ async def faq_answer(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     button_text = get_button_text_from_callback(query)
     await query.edit_message_reply_markup(reply_markup=None)
     if button_text:
-        # --- FIX: Added parse_mode ---
         await query.message.reply_text(f"*{get_text('selection_confirmation', lang)}* {button_text}", parse_mode=ParseMode.MARKDOWN)
     
     question_key = query.data.replace('faq_', '') + '_a'
@@ -152,7 +146,6 @@ async def faq_answer(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
 
-    # --- FIX: Added parse_mode ---
     await query.message.reply_text(text=answer_text, reply_markup=reply_markup, parse_mode=ParseMode.MARKDOWN)
     return FAQ_PATH
 
@@ -165,22 +158,24 @@ async def end_chat(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     button_text = get_button_text_from_callback(query)
     await query.edit_message_reply_markup(reply_markup=None)
     if button_text:
-        # --- FIX: Added parse_mode ---
         await query.message.reply_text(f"*{get_text('selection_confirmation', lang)}* {button_text}", parse_mode=ParseMode.MARKDOWN)
     
-    # --- FIX: Added parse_mode ---
     await query.message.reply_text(text=get_text('end_chat_message', lang), parse_mode=ParseMode.MARKDOWN)
     return ConversationHandler.END
 
 async def text_fallback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Handles any text input from the user when they should be clicking buttons."""
     lang = context.user_data.get('lang', 'en')
-    # --- FIX: Added parse_mode ---
     await update.message.reply_text(get_text('error_handler', lang), parse_mode=ParseMode.MARKDOWN)
 
 def main() -> None:
     """Run the bot."""
-    application = Application.builder().token("YOUR_TELEGRAM_BOT_TOKEN").build()
+    # --- DEPLOYMENT CHANGE: Get token from environment variable ---
+    TOKEN = os.environ.get("TELEGRAM_TOKEN")
+    if not TOKEN:
+        raise ValueError("Please set the TELEGRAM_TOKEN environment variable.")
+
+    application = Application.builder().token(TOKEN).build()
 
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler("start", start)],
